@@ -52,7 +52,8 @@ function cleanPhone(value) {
 }
 
 export default function App() {
-  const isAdminPath = window.location.pathname.endsWith('/admin');
+  const isAdminPath =
+    window.location.pathname.endsWith('/admin') || window.location.hash === '#/admin';
 
   if (isAdminPath) {
     return <AdminAttendance />;
